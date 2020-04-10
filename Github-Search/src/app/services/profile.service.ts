@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient,} from '@angular/common/http';
-// import {HttpHeaders} from '@angular/common/http';
-// import {catchError, map} from 'rxjs/operators'
-// import {throwError} from 'rxjs';
-// import {Observable} from 'rxjs/Observable' 
+import {HttpHeaders} from '@angular/common/http';
+// import 'rxjs/operator/add/map'
+// import { mapToMapExpression } from '@angular/compiler/src/render3/util';
+import { Subscriber } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,7 @@ export class ProfileService {
   getProfileInfo(){
     return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.cliendid + "&client_secret=" + this.clientsecret)
     .subscribe(res => console.log(res));
+    
     ;
     
   }
