@@ -8,10 +8,14 @@ import { Subscriber } from 'rxjs';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  profile:any[any];
+  profile:any[];
+  
 
   constructor(private profileService: ProfileService) {
-    this.profileService.getProfileInfo().valueOf()
+    this.profileService.getProfileInfo().subscribe(profile=>{
+      console.log(profile)
+      return profile;
+    })
     this.profile = this.profile;
     
     

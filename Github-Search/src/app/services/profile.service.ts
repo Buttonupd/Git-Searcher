@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-import {HttpClient,} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {HttpHeaders} from '@angular/common/http';
-// import 'rxjs/operator/add/map'
+import {map} from 'rxjs/operators'
 // import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 import { Subscriber } from 'rxjs';
+import {Observable, of, Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -21,9 +22,7 @@ export class ProfileService {
   }
   getProfileInfo(){
     return this.http.get("https://api.github.com/users/" + this.username + "?client_id=" + this.cliendid + "&client_secret=" + this.clientsecret)
-    .subscribe(res => console.log(res));
+    .pipe(map(res => res));
     
-    ;
-    
-  }
+  };
 }
