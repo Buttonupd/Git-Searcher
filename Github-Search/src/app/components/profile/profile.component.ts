@@ -3,6 +3,7 @@ import {ProfileService} from '../../services/profile.service';
 import { Subscriber } from 'rxjs';
 // import {Profile} from  '../../profile';
 import { Identifiers } from '@angular/compiler';
+import { stringify } from 'querystring';
 
 @Component({
   selector: 'app-profile',
@@ -12,6 +13,7 @@ import { Identifiers } from '@angular/compiler';
 export class ProfileComponent implements OnInit {
   profile:any['ProfileService'];
   repos:any['ProfileService'];
+  username:string;
 
   // profile:Profile[] = [
   //   new Profile, {name:'', repos:''},
@@ -19,7 +21,12 @@ export class ProfileComponent implements OnInit {
  
 
   constructor(private profileService: ProfileService) {
-    this.profileService.getProfileInfo().subscribe(profile =>{
+   
+   }
+
+   findProfile(){
+     this.profileService.updateProfile(this.username);
+     this.profileService.getProfileInfo().subscribe(profile =>{
       console.log(profile)
       // return profile;
      this.profile = profile;
@@ -29,7 +36,9 @@ export class ProfileComponent implements OnInit {
       console.log(repos);
       this.repos = repos;
       
-    })
+      
+    });
+     
    }
 
   ngOnInit(): void {
