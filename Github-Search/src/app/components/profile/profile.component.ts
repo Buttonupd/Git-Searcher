@@ -21,11 +21,6 @@ export class ProfileComponent implements OnInit {
  
 
   constructor(private profileService: ProfileService) {
-   
-   }
-
-   findProfile(){
-     this.profileService.updateProfile(this.username);
      this.profileService.getProfileInfo().subscribe(profile =>{
       console.log(profile)
       // return profile;
@@ -38,7 +33,12 @@ export class ProfileComponent implements OnInit {
       
       
     });
-     
+   
+   }
+
+   findProfile(){
+     this.profileService.updateProfile(this.username);
+
    }
 
   ngOnInit(): void {

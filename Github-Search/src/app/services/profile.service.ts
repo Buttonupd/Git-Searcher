@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {HttpHeaders} from '@angular/common/http';
-import {map} from 'rxjs/operators'
+import {map} from 'rxjs/operators';
 // import { mapToMapExpression } from '@angular/compiler/src/render3/util';
 import { Subscriber } from 'rxjs';
 import {Observable, of, Subject} from 'rxjs';
@@ -17,7 +17,7 @@ export class ProfileService {
   private clientsecret = "a69227bddddcefbac0a8f6f4c7cad0d4a02cd1f0"
   
   constructor(private http: HttpClient) { 
-    console.log("service is now ready");
+    console.log("service is now ready")
     this.username = 'Buttonupd';
     
   }
