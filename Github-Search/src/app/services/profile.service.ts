@@ -10,6 +10,7 @@ import {Observable, of, Subject} from 'rxjs';
   providedIn: 'root'
 })
 export class ProfileService {
+  profile:any[];
 
   private username: string;
   private cliendid = "16f2ea557619fa1ae864";
