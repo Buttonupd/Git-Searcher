@@ -11,6 +11,7 @@ import { Identifiers } from '@angular/compiler';
 })
 export class ProfileComponent implements OnInit {
   profile:any['ProfileService'];
+  repos:any['ProfileService'];
 
   // profile:Profile[] = [
   //   new Profile, {name:'', repos:''},
@@ -23,6 +24,12 @@ export class ProfileComponent implements OnInit {
       // return profile;
      this.profile = profile;
     });
+
+    this.profileService.getProfileRepos().subscribe(repos =>{
+      console.log(repos);
+      this.repos = repos;
+      
+    })
    }
 
   ngOnInit(): void {
