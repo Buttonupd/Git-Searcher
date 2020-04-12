@@ -1,21 +1,21 @@
- <!-- <form action class="search">
+ <form action class="search">
     <div class="form-group">
-       <input type="text" class="form-control" placeholder="Search git users" [(
-       ngModel)]="username" name="username" (Keyup)="findProfile">
+       <input type="text" class="form-control" placeholder="Search git users" 
+       [(ngModel)]="username" name="username" (keyup)="findProfile()">
     </div>
- </form> -->
+ </form>
  
  <div *ngIf='profile'>
    <div class="panel panel-default">
       <div class="panel-heading">
          {{profile.name}} <small> ({{profile.login}}) </small>
          <span *ngIf='profile.company'>, Works at {{profile.company}}</span>
-         {{profile.location}}
+         ,{{profile.location}}
       </div>
       <div class="panel-body">
          <div class="row">
             <div class="col-sm-3">
-               <img src=" {{profile.avatar_url}} " class="img-circle img-responsive" alt="Profile image">
+               <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile image">
                
             </div>
             <div class="col-sm-5">

@@ -21,7 +21,14 @@ export class ProfileComponent implements OnInit {
  
 
   constructor(private profileService: ProfileService) {
-     this.profileService.getProfileInfo().subscribe(profile =>{
+    
+   
+   }
+
+   findProfile(){
+     this.profileService.updateProfile(this.username);
+     
+      this.profileService.getProfileInfo().subscribe(profile =>{
       console.log(profile)
       // return profile;
      this.profile = profile;
@@ -33,11 +40,6 @@ export class ProfileComponent implements OnInit {
       
       
     });
-   
-   }
-
-   findProfile(){
-     this.profileService.updateProfile(this.username);
 
    }
 
