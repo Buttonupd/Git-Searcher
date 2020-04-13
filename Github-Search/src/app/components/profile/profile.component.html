@@ -9,7 +9,7 @@
  <div *ngIf='profile'>
    <div class="panel panel-default">
       <div class="panel-heading">
-         appNormal {{profile.name}} <small> ({{profile.login}}) </small>
+         {{profile.name}} <small  > ({{profile.login}}) </small>
          <span *ngIf='profile.company'>, Works at {{profile.company}}</span>
          ,{{profile.location}}
       </div>
@@ -45,7 +45,7 @@
                         <h3 class="panel-title">Public Repos</h3>
                      </div>
                      <div class="panel-body" *ngFor='let repo of repos'>
-                        <p class="clearfix">
+                        <p appNormal class="clearfix">
                            {{repo.name}} <a href=" {{repo.html_url}} " target="_blank" class="btn btn-sm btn-warning pull-right">View this project on Github</a>
 
                         </p>
