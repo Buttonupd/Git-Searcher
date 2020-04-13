@@ -1,4 +1,4 @@
-Devoped by
+Developed by
 
     Dan Kariuki alias Buttonupd
 
@@ -21,6 +21,10 @@ Languages /framework/s /libraries
 Developer's contact
 
     Dankariuki0101@gmail.com
+    
+The link to this application
+
+     https://buttonupd.github.io/Git-Searcher/
 
 Any first/last words
 
