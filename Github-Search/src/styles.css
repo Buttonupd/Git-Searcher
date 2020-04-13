@@ -1,4 +1,27 @@
 .search {
     padding-top: 50px;
     color: gold;
+};
+
+.panel panel-default{
+    color: teal;
+};
+
+.panel-body img {
+    float: left;
+};
+
+.panel-body p{
+    align-items: center;
+}
+
+.list-group{
+    color: teal;
+    align-items: center;
+
+};
+
+.col-sm-4{
+    text-align: center;
+    align-items: center;
 }
