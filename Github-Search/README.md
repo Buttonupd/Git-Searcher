@@ -26,10 +26,6 @@ The link to this application
 
      https://buttonupd.github.io/Git-Searcher/
 
-Any first/last words
-
-    First: Enjoy
-
 
 GithubSearch
 
