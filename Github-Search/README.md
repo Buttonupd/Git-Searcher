@@ -1,10 +1,10 @@
 Developed by
 
-    Dan Kariuki alias Buttonupd
+    Dan Kariuki 
 
 Date: 
 
-    Developed on 1/04/2020
+    Developed on 11/04/2020
 
 Requirements/Dependencies
 
@@ -14,7 +14,7 @@ Known bugs
 
     At the moment, redirecting requires users to configure their web browser settings according to pop up suggestion/s.
 
-Languages /framework/s /libraries
+Languages /framework/s /libraries used in the development of this application
 
     Javascript/Typescript, AngularJs, Jquery, CSS, Html
 
